@@ -1,0 +1,106 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.header{
+	width: 100%;
+	height: 60px;
+	background-color: cyan;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+
+.menu{
+	margin-top: 60px;
+	position: fixed;top: 0;
+	left: 0;
+	width: 250px;
+	height: 100vh;
+	background-color: red;
+	color: white;
+	transform: translateX(-250px);
+	transition: all .2s;
+}
+
+
+.main{
+	margin-top: 100px;
+	padding: 10px 50px;
+}
+.navbar ul li{
+	color: white;
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+ul li{
+	margin-top: 40px;
+	list-style: none;
+	text-align:center;
+}
+
+
+.label{
+	position: absolute;top: 20px;
+	left: 20px;
+	height: 20px;
+	width: 20px;
+	background-color: ;
+	z-index: 20;
+	cursor: pointer;	
+}
+
+
+#sidebartoggle:checked ~ .menu{
+	transform: translateX(0px);
+	transition: all 1s ease-in-out;
+}
+
+.spinner{
+	height: 4px;
+	width: 20px;
+	background-color: black;transition: all 1s;
+}
+
+.middle{
+	margin-top: 2px; margin-bottom: 2px;
+}
+
+#sidebartoggle:checked ~ .label > .spinner.top{
+	transform: rotate(130deg);
+	transition: all 1s;
+	margin-top: 11px;
+}
+
+#sidebartoggle:checked ~ .label > .spinner.middle{
+	opacity: 0;	
+}
+
+#sidebartoggle:checked ~ .label > .spinner.bottom{
+	transform: rotate(-130deg);
+	margin-top: -12px;
+	transition: all 1s;
+	
+}
+
+
+.main h1{
+	margin-bottom: 20px;
+}
+
+
+@media (max-width: 700px){
+	.lead{
+		font-size: .9rem;
+	}
+}
